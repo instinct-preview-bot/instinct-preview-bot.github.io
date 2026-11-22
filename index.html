@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الأدوات</title>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: radial-gradient(1200px 800px at 50% 30%, #232733 0%, #16181f 60%, #101218 100%);
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif; color: #e8eaf0; padding: 32px 16px;
+  }
+  h1 { font-size: 22px; font-weight: 600; color: #aab0c0; margin-bottom: 40px; letter-spacing: 0.5px; }
+  .cards { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
+  .card {
+    width: 240px; padding: 36px 24px 28px; border-radius: 20px; text-align: center;
+    background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.09);
+    text-decoration: none; color: inherit; transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    display: flex; flex-direction: column; align-items: center; gap: 18px;
+  }
+  a.card:hover { transform: translateY(-4px); border-color: #4f8cff; background: rgba(79, 140, 255, 0.08); }
+  .card svg { width: 72px; height: 72px; }
+  .name { font-size: 19px; font-weight: 600; }
+  .note { font-size: 13px; color: #9aa1b2; line-height: 1.6; }
+  .card.disabled { opacity: 0.55; cursor: default; position: relative; }
+  .soon {
+    display: inline-block; font-size: 12px; font-weight: 600; color: #ffd479;
+    border: 1px solid rgba(255, 212, 121, 0.5); border-radius: 999px; padding: 3px 14px;
+  }
+</style>
+</head>
+<body>
+<h1>اختر الأداة</h1>
+<div class="cards">
+  <a class="card" href="./editor/">
+    <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <path d="M32 6 54 18v28L32 58 10 46V18L32 6Z" stroke="#4f8cff" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M10 18l22 12 22-12M32 30v28" stroke="#4f8cff" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle cx="32" cy="18" r="3" fill="#8fb7ff"/>
+    </svg>
+    <span class="name">محرر ثري دي</span>
+  </a>
+  <div class="card disabled" aria-disabled="true">
+    <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <path d="M8 32h6l4-12 6 24 5-18 4 10 5-6h18" stroke="#9aa1b2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="50" cy="20" r="4" stroke="#9aa1b2" stroke-width="2.5"/>
+    </svg>
+    <span class="name">الاستوديو الصوتي</span>
+    <span class="soon">قريبًا</span>
+    <span class="note">برنامج بيتنزل ويشتغل على جهازك — محلي بالكامل</span>
+  </div>
+</div>
+</body>
+</html>
