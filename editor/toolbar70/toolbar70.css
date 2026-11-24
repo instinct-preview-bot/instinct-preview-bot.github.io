@@ -69,3 +69,6 @@
 @media (min-width: 1280px) { #toolbar-center { left: calc(50% - 59px); } #toolbar-center .t70-sep { display: none; } }
 
 .t70-create-menu { max-height: 440px; overflow-y: auto; min-width: 198px; }
+
+.tbmenu.t70-menu.topmenu { right: auto; width: max-content; min-width: 220px; max-width: calc(100vw - 24px); }
+#export-btn + .tbmenu.topmenu, #zoom-btn + .tbmenu.topmenu { left: auto !important; right: 12px; }
