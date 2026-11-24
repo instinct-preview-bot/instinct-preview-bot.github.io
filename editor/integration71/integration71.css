@@ -25,7 +25,7 @@
 #stage #hud { bottom: 10px; }
 #stage .roundbtns { bottom: 96px; }
 /* Keep all toolbar actions reachable without covering mode/export controls. */
-@media (max-width: 1150px) {
+@media (max-width: 1279px) {
   #topbar { height: 100px; align-items: flex-start; padding-top: 12px; }
   #toolbar-center { top: 58px; max-width: 100%; }
   #work { height: calc(100vh - 100px); }
