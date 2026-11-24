@@ -1,7 +1,7 @@
 /* قشرة المحرر — لغة بصرية مطابقة لبنية محرر Spline المرجعي (دراسة شكل فقط؛ كل العناصر مرسومة نظيفة) */
 :root {
-  --bg-panel: #1b1c1f; --bg-panel2: #222428; --bg-input: #2b2e33; --border: #30333a;
-  --text: #e8eaee; --text-dim: #9aa0aa; --accent: #4f7cff; --row-hover: #26282d; --row-active: #2d3547;
+  --bg-panel: #1e1e1e; --bg-panel2: #252525; --bg-input: #292929; --border: #292929;
+  --text: #d5d5d5; --text-dim: #a1a1a1; --accent: #4f7cff; --row-hover: #292929; --row-active: #2d3547;
 }
 * { box-sizing: border-box }
 body { margin: 0; font: 13px/1.45 -apple-system, 'Segoe UI', Inter, system-ui, sans-serif; background: #101114; color: var(--text); overflow: hidden; }

@@ -1,8 +1,8 @@
 /* timeline70: كل القواعد موسومة بنطاق .tl70 — بلا resets عامة ولا IDs متداخلة.
    الرابط يُحقن من timeline.js (المملوك لهذه الميزة)؛ المنسّق قد ينقله لرابط static لاحقًا. */
-.tl70 { display: flex; flex-direction: column; height: 100%; background: var(--bg-panel, #1b1c1f); color: var(--text, #e8eaee); font-size: 12px; user-select: none; }
+.tl70 { display: grid; grid-template-columns: 230px minmax(0, 1fr); grid-template-rows: 34px minmax(0, 1fr); height: 100%; background: var(--bg-panel, #1b1c1f); color: var(--text, #e8eaee); font-size: 12px; user-select: none; }
 .tl70 * { box-sizing: border-box; }
-.tl70-transport { display: flex; align-items: center; gap: 4px; padding: 4px 8px; border-bottom: 1px solid var(--border, #30333a); min-height: 34px; }
+.tl70-transport { grid-column: 2; grid-row: 1; display: flex; align-items: center; gap: 4px; padding: 4px 8px; border-bottom: 1px solid var(--border, #30333a); min-height: 34px; }
 .tl70-transport .tl70-time { min-width: 44px; text-align: center; font-variant-numeric: tabular-nums; color: var(--text-dim, #9aa0aa); background: var(--bg-input, #2b2e33); border-radius: 6px; padding: 3px 6px; }
 .tl70-transport .tl70-dur { width: 52px; background: var(--bg-input, #2b2e33); color: var(--text, #e8eaee); border: 1px solid var(--border, #30333a); border-radius: 6px; padding: 3px 6px; font-size: 12px; text-align: center; }
 .tl70-spacer { flex: 1; }
@@ -13,11 +13,11 @@
 .tl70-btn:disabled:hover { background: none; color: var(--text-dim, #9aa0aa); }
 .tl70-btn svg { width: 15px; height: 15px; display: block; }
 
-.tl70-main { flex: 1; display: flex; flex-direction: column; min-height: 0; position: relative; }
-.tl70-ruler-wrap { height: 26px; position: relative; overflow: hidden; border-bottom: 1px solid var(--border, #30333a); margin-inline-start: 240px; }
+.tl70-main { grid-column: 2; grid-row: 2; flex: 1; display: flex; flex-direction: column; min-height: 0; position: relative; }
+.tl70-ruler-wrap { height: 26px; position: relative; overflow: hidden; border-bottom: 1px solid var(--border, #30333a); margin-inline-start: 270px; }
 .tl70-ruler { display: block; cursor: ew-resize; }
 .tl70-body { flex: 1; overflow: auto; position: relative; }
-.tl70-grid { display: grid; grid-template-columns: 240px 1fr; min-width: 100%; width: max-content; }
+.tl70-grid { display: grid; grid-template-columns: 270px 1fr; min-width: 100%; width: max-content; }
 .tl70-sidecol { position: sticky; inset-inline-start: 0; z-index: 5; background: var(--bg-panel, #1b1c1f); border-inline-end: 1px solid var(--border, #30333a); }
 .tl70-lanescol { position: relative; }
 
@@ -61,3 +61,14 @@
 
 .tl70-curves { display: block; cursor: crosshair; }
 .tl70-empty { padding: 18px 14px; color: var(--text-dim, #9aa0aa); }
+
+.tl70-list { grid-column: 1; grid-row: 1 / 3; overflow: auto; border-inline-end: 1px solid var(--border); }
+
+.tl70-grid { min-height: 100%; }
+.tl70-sidecol { display: flex; flex-direction: column; }
+.tl70-animate-wrap { margin-top: auto; }
+/* One property chip per lane; family labels do not consume a lane. */
+.tl70-lane-grow { height: 26px; }
+.tl70-prow { position: relative; display: grid; grid-template-columns: 1fr; grid-auto-rows: 30px; height: auto; gap: 0; }
+.tl70-prow .tl70-pname { position: absolute; left: 26px; top: 7px; }
+.tl70-prow .tl70-chip { margin-left: 64px; align-self: center; }
