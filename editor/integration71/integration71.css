@@ -33,6 +33,11 @@
   #hud { max-width: calc(100% - 24px); max-height: 34px; overflow: auto; }
 }
 #mode-seg { background: none; padding: 0; gap: 6px; }
-#mode-seg button { font-family: Arial, sans-serif; font-size: 11px; padding: 9px 16px; height: 36px; line-height: 18px; }
+#mode-seg button { font-family: Arial, sans-serif; font-size: 11px; padding: 5px 16px; height: 28px; line-height: 18px; }
 #mode-seg button.on { background: #333; box-shadow: none; }
 @media (min-width: 1600px) { #mode-seg { position: absolute; left: 336px; } }
+
+/* Measured desktop action group ends at the viewport/inspector boundary. */
+@media (min-width: 1600px) { #topbar .right { margin-right: 234px; } }
+#topbar .right > .btn { border-radius: 6px; background: #333; color: #ddd; font-size: 11px; padding: 7px 12px; height: 28px; border: none; }
+#topbar .right > #zoom-btn { background: transparent; }
