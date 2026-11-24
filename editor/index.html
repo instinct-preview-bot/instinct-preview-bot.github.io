@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spline-like 3D Editor</title>
 <link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./inspector70/inspector.css">
+<link rel="stylesheet" href="./image70/image70.css">
+<link rel="stylesheet" href="./video70/video70.css">
+<link rel="stylesheet" href="./mesh70/mesh70.css">
+<link id="toolbar70-css" rel="stylesheet" href="./toolbar70/toolbar70.css">
+  <link rel="stylesheet" href="./integration71/integration71.css">
+  <link rel="stylesheet" data-timeline70="1" href="./timeline70/timeline70.css">
 </head>
 <body>
 <header id="topbar">
@@ -46,9 +53,6 @@
   <aside id="right" class="panel"><div id="inspector"></div></aside>
 </div>
 <span id="selinfo" hidden></span>
-<script type="module" src="./assets/app.js"></script>
-<script type="module">
-  import('./assets/app.js').then((m) => m.boot()).catch((e) => { console.error(e); window.__bootError = String(e?.stack ?? e) })
-</script>
+<script type="module" src="./assets/startup.js"></script>
 </body>
 </html>

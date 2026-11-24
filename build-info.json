@@ -1,0 +1,7 @@
+{
+  "checkpoint": 240,
+  "builtAt": "2026-11-24",
+  "startupSha256": "6a86005bc3a31784e6ed8cc091cc26c32d245eda56e6fdc039ba28a254d7b789",
+  "status": "structural-cleanup-in-progress",
+  "renderApi": "webgl2"
+}

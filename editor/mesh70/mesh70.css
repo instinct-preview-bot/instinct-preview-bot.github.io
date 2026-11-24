@@ -1,0 +1,13 @@
+/* mesh70: أنماط محصورة بالميزة — متغيرات مع fallbacks محلية من قياسات الدليل (لقطات Dark 22 نوفمبر) */
+.mesh70-panel { display: flex; flex-direction: column; gap: 6px; padding: 6px 0; color: var(--mesh70-text, #c1c1c1); font-size: 12px; }
+.mesh70-btn { background: var(--mesh70-btn-bg, #2f2f2f); color: var(--mesh70-text, #c1c1c1); border: 1px solid var(--mesh70-btn-border, #1d1d1d); border-radius: 6px; height: 28px; padding: 0 10px; cursor: pointer; font-size: 12px; }
+.mesh70-btn:hover { background: var(--mesh70-btn-hover, #3a3a3a); }
+.mesh70-btn--active { background: var(--mesh70-accent, #22c55e); color: #0b0f0c; border-color: var(--mesh70-accent, #22c55e); }
+.mesh70-btn--primary { background: var(--mesh70-accent, #22c55e); color: #0b0f0c; border-color: var(--mesh70-accent, #22c55e); }
+.mesh70-wide { width: 100%; }
+.mesh70-modes { display: flex; gap: 4px; }
+.mesh70-modes .mesh70-btn { flex: 1; }
+.mesh70-row { display: flex; gap: 4px; }
+.mesh70-row .mesh70-btn { flex: 1; }
+.mesh70-input { background: var(--mesh70-input-bg, #1d1d1d); color: var(--mesh70-text, #c1c1c1); border: 1px solid var(--mesh70-btn-border, #2a2a2a); border-radius: 6px; height: 28px; width: 64px; padding: 0 6px; font-size: 12px; }
+.mesh70-info { color: var(--mesh70-dim, #8a8a8a); font-size: 11px; }

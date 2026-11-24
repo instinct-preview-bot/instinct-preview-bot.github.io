@@ -1,0 +1,8 @@
+{
+  "package": "@fontsource-variable/spline-sans",
+  "version": "5.3.0",
+  "integrity": "sha512-a0EVY1u6qvI5uk66ImOKbh3QD8y3LtMpuqMMyN4OB9eJwivKPXNTn8rJUB+YLrJ5LxS85vqSmG1xeYG/mF8MDw==",
+  "license": "OFL-1.1",
+  "download": "npm pack --ignore-scripts",
+  "status": "independently distributed font, not extracted from Spline; not wired into editor yet"
+}

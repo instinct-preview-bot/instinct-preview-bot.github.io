@@ -1,0 +1,19 @@
+/* Central layout containment for the measured 230px inspector shell. */
+.inspector70 > [data-extension="image70"] { padding: 10px 12px; border-bottom: 1px solid var(--i70-border); min-width: 0; }
+.inspector70 .img70 { min-width: 0; }
+.inspector70 .img70-head { display: flex; gap: 8px; }
+.inspector70 .img70-thumb { flex: 0 0 40px; }
+.inspector70 .img70-meta { min-width: 0; flex: 1; line-height: 14px; white-space: normal; overflow-wrap: anywhere; word-break: normal; }
+.inspector70 .img70-row > span { flex: 0 0 65px; min-width: 0; }
+.inspector70 .img70-row > select, .inspector70 .img70-row > input { flex: 1; min-width: 0; width: 0; }
+.inspector70 .img70-actions { display: flex; flex-wrap: wrap; }
+.inspector70 .img70-actions button { padding: 3px 7px; }
+.inspector70 .img70-vis { white-space: nowrap; }
+.inspector70 .img70-status { line-height: 14px; overflow-wrap: anywhere; }
+.inspector70 .video70-panel strong { min-width: 0; overflow-wrap: anywhere; }
+.inspector70 .video70-panel input[type="range"] { min-width: 0; width: 120px; }
+
+/* Reserve actual camera space instead of drawing under the timeline dock. */
+#stage { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+#stage #view { flex: 1 1 0; height: 0; min-height: 0; }
+#stage #timeline { position: relative; flex: 0 0 auto; }

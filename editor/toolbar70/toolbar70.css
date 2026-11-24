@@ -1,0 +1,67 @@
+/* toolbar70 — أنماط محصورة بالميزة. ألوان مقاسة من لقطات المصدر الداكن 22-11-2026:
+   شريط/حوار #1e1e1e، بلاطة #252525، أيقونة باهتة #9c9c9c، أخضر التايم لاين ~#539d52. */
+.t70-menu { position: absolute; min-width: 170px; padding: 5px; z-index: 70; }
+.t70-menu-head { padding: 6px 10px 3px; font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-dim, #9c9c9c); }
+.t70-menu-sep { height: 1px; margin: 4px 6px; background: var(--border, #30333a); }
+.t70-menu button { display: flex; align-items: center; gap: 8px; width: 100%; }
+.t70-menu button:focus-visible { outline: 2px solid var(--accent, #4f7cff); outline-offset: -2px; }
+.t70-menu button[disabled] { opacity: .45; cursor: default; }
+.t70-menu button[disabled]:hover { background: none; }
+.t70-item-icon { width: 15px; height: 15px; display: inline-flex; color: var(--text-dim, #9c9c9c); }
+.t70-item-icon svg { width: 15px; height: 15px; }
+.t70-item-label { flex: 1; text-align: start; }
+.t70-item-badge { font-size: 10px; padding: 1px 6px; border-radius: 8px; background: var(--bg-input, #2b2e33); color: var(--text-dim, #9c9c9c); }
+
+/* أزرار الشريط المضافة */
+#toolbar-center .iconbtn[data-action="timeline-toggle"].active { background: rgba(83, 157, 82, .22); color: #7ec27d; }
+#toolbar-center .iconbtn[disabled] { opacity: .38; cursor: default; }
+#toolbar-center .iconbtn[disabled]:hover { background: none; color: var(--text-dim, #9aa0aa); }
+
+/* حوار الاستيراد */
+.t70-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, .55); display: flex; align-items: flex-start; justify-content: center; padding-top: 18px; z-index: 90; }
+.t70-overlay[hidden] { display: none; }
+.t70-card { width: 592px; max-width: calc(100vw - 48px); background: var(--bg-panel2, #1e1e1e); border: 1px solid var(--border, #30333a); border-radius: 14px; padding: 26px 26px 20px; box-shadow: 0 24px 64px rgba(0, 0, 0, .6); }
+.t70-card.t70-drop { outline: 2px dashed var(--accent, #4f7cff); outline-offset: -6px; }
+.t70-card-title { text-align: center; font-size: 15px; font-weight: 600; color: var(--text, #e8eaee); margin-bottom: 18px; }
+.t70-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.t70-tile { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 16px 8px 13px; background: var(--bg-input, #252525); border: 1px solid transparent; border-radius: 10px; color: var(--text, #e8eaee); cursor: pointer; min-height: 100px; justify-content: center; }
+.t70-tile:hover:not([disabled]) { background: var(--row-hover, #2b2b2b); border-color: var(--border, #30333a); }
+.t70-tile:focus-visible { outline: 2px solid var(--accent, #4f7cff); outline-offset: 1px; }
+.t70-tile[disabled] { opacity: .42; cursor: default; }
+.t70-tile-icon { width: 22px; height: 22px; color: var(--text-dim, #9c9c9c); display: inline-flex; }
+.t70-tile-icon svg { width: 22px; height: 22px; }
+.t70-tile-label { font-size: 12.5px; font-weight: 600; }
+.t70-tile-formats { font-size: 10.5px; color: var(--text-dim, #9c9c9c); text-align: center; }
+.t70-tile-busy .t70-tile-icon { animation: t70spin 1s linear infinite; }
+@keyframes t70spin { to { transform: rotate(360deg) } }
+.t70-card.t70-busy .t70-tile { pointer-events: none; }
+.t70-import-error { margin-top: 14px; padding: 8px 12px; border-radius: 8px; background: rgba(200, 60, 60, .14); border: 1px solid rgba(200, 60, 60, .4); color: #f0a0a0; font-size: 12px; }
+
+/* أزرار الشريط 28×28 شفافة (ui-measurements.json) — محصور بمركز الشريط فقط */
+#toolbar-center .iconbtn { width: 28px; height: 28px; border-radius: 6px; }
+#toolbar-center { display: flex; align-items: center; gap: 8px; }
+#toolbar-center .iconbtn.t70-wide, #toolbar-center .iconbtn[data-action="timeline-toggle"] { width: auto; min-width: 28px; padding: 0 6px; gap: 4px; }
+.t70-sep { width: 1px; height: 18px; background: var(--border, #30333a); margin: 0 2px; align-self: center; flex: none; }
+.t70-tl-badge { font-size: 10px; font-weight: 600; color: #7ec27d; }
+#toolbar-center .iconbtn[data-action="timeline-toggle"].active { background: rgba(255, 255, 255, .08); color: #7ec27d; }
+
+/* قوائم منسدلة بمقاسات المصدر: خلفية #252525، صف ~30px، خط Spline Sans ثم بدائل */
+.t70-menu { background: var(--t70-menu-bg, #252525); font-family: 'Spline Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+.t70-menu button { min-height: 30px; padding: 4px 12px 4px 10px; font-size: 12px; }
+.t70-item-check { width: 14px; color: var(--text, #e8eaee); font-size: 11px; }
+.t70-item-shortcut { color: var(--text-dim, #9c9c9c); font-size: 11px; margin-inline-start: 18px; }
+
+/* إخفاء لوحة التايم لاين عبر المبدّل — #timeline بأنماط المنسّق display:flex يتغلّب على [hidden] */
+#timeline.t70-hidden, #timeline[hidden] { display: none; }
+
+/* أزرار القوائم بلا صنف tbmenu (قوائم 2D/3D) — نفس مظهر tbmenu */
+.t70-menu button { background: none; border: none; color: var(--text, #e8eaee); text-align: start; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 8px; width: 100%; }
+.t70-menu button:hover:not([disabled]) { background: var(--row-hover, #2b2b2b); }
+/* Keep long import warnings inside smaller viewports. */
+.t70-card { max-height: calc(100vh - 32px); overflow-y: auto; }
+.t70-feedback77:empty { display: none; }
+.t70-feedback77 { margin-top: 16px; padding: 12px; border: 1px solid #555; border-radius: 8px; overflow-wrap: anywhere; }
+.t70-feedback77 h3 { margin: 0 0 8px; font-size: 14px; }
+.t70-feedback77 ul { padding-left: 20px; font-size: 13px; line-height: 1.5; }
+.t70-feedback77 button { margin: 4px 8px 0 0; padding: 7px 12px; background: #333; color: #eee; border: 1px solid #666; border-radius: 6px; cursor: pointer; }
+.t70-feedback77 button:focus-visible { outline: 2px solid #9177ff; outline-offset: 2px; }
