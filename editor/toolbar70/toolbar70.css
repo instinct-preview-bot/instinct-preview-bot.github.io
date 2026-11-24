@@ -67,3 +67,5 @@
 .t70-feedback77 button:focus-visible { outline: 2px solid #9177ff; outline-offset: 2px; }
 
 @media (min-width: 1280px) { #toolbar-center { left: calc(50% - 59px); } #toolbar-center .t70-sep { display: none; } }
+
+.t70-create-menu { max-height: 440px; overflow-y: auto; min-width: 198px; }
