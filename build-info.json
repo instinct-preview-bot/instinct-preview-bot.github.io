@@ -1,6 +1,6 @@
 {
-  "checkpoint": 632,
-  "startupSha256": "0cb0990a07b751780e1acd9aecb12339408b53e84d387d7178ebdc854b1cc4b3",
+  "checkpoint": 635,
+  "startupSha256": "df4a5656766c0e1182d8d58ef814af11a97fa70a7c527527eb59ddd9b8cd68a5",
   "status": "parity-fidelity-in-progress",
   "renderApi": "webgl2"
 }
