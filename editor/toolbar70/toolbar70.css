@@ -72,3 +72,6 @@
 
 .tbmenu.t70-menu.topmenu { right: auto; width: max-content; min-width: 220px; max-width: calc(100vw - 24px); }
 #export-btn + .tbmenu.topmenu, #zoom-btn + .tbmenu.topmenu { left: auto !important; right: 12px; }
+
+.t70-zoom-menu button:disabled { opacity: .4; cursor: default; }
+.t70-zoom-menu button:disabled:hover { background: transparent; }
