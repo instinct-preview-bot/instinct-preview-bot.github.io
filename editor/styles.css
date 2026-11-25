@@ -95,3 +95,12 @@ body.ui-hidden #left, body.ui-hidden #right, body.ui-hidden #timeline { display:
 #code-editor { flex: 1; background: #14171d; color: #d5dbe5; border: none; outline: none; resize: none; padding: 10px; font: 12px/1.5 ui-monospace, monospace; }
 #code-output { max-height: 90px; overflow: auto; margin: 0; padding: 8px 10px; border-top: 1px solid var(--border); font: 11px ui-monospace, monospace; white-space: pre-wrap; }
 #code-output.ok { color: #3ecf6e; } #code-output.err { color: #ff6b6b; }
+
+body.left-hidden #work { grid-template-columns: 0 1fr 230px; }
+body.left-hidden #left { display: none; }
+
+#topbar > .iconbtn + .topmenu { max-height: calc(100vh - 64px); overflow-y: auto; }
+/* Left header cluster (menu, name, sidebar toggle) spans the 320px left column so the toggle sits at its right end (source captures: center x~297). Only where integration71 pins the mode switch at x=336 (>=1600px); narrower windows keep the natural flow so nothing overlaps the title or the 11-icon center toolbar. */
+#topbar .docname { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 1599px) { #topbar .docname { max-width: 90px; } #topbar .docname .rename { width: 100% !important; } }
+@media (min-width: 1600px) { #topbar .docname { flex: 0 0 220px; } }

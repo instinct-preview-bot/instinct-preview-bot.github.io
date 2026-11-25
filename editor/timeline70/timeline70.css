@@ -76,3 +76,9 @@
 .tl70-tlhead { height: 48px; padding: 6px 12px; font-weight: 400; font-size: 11.5px; }
 .tl70-tlrow { height: 32px; margin: 0 12px; padding: 5px 12px; }
 .tl70-tlrow.active { background: #494949; }
+
+.tl70-animate-wrap.has-chip { display: flex; align-items: center; gap: 6px; padding: 4px; background: var(--bg-panel2, #25272c); border-radius: 10px; }
+.tl70-animate-wrap.has-chip .tl70-animate-btn { width: auto; flex: 0 0 auto; min-width: 100px; }
+.tl70-animate-chip { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 6px; padding: 0 6px; color: var(--text-dim, #9aa0aa); font-size: 12px; }
+.tl70-animate-chip svg { width: 15px; height: 15px; flex: none; }
+.tl70-animate-chip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

@@ -17,6 +17,7 @@
 <header id="topbar">
   <button class="iconbtn" title="Menu"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button>
   <span class="docname">Untitled</span>
+  <button class="iconbtn" id="sidebar-toggle" title="Hide Sidebar" aria-pressed="false"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="12" height="10" rx="2"/><path d="M6 3v10"/></svg></button>
   <div class="seg" id="mode-seg">
     <button data-mode="preview">Preview</button><button data-mode="edit" class="on">Edit</button><button data-mode="code">Code</button>
   </div>
@@ -29,7 +30,7 @@
 </header>
 <div id="work">
   <aside id="left" class="panel">
-    <div class="tabs"><button class="on">Objects</button><button disabled title="بعدًا">Assets</button></div>
+    <div class="tabs"><button class="on">Objects</button><button disabled title="Not connected: asset library is not available">Assets</button></div>
     <div class="sec-head"><span>Scenes</span><button class="iconbtn" id="add-scene-btn" title="Add scene"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3v10M3 8h10"/></svg></button></div>
     <div id="sceneList"></div>
     <div class="search"><input id="outliner-search" placeholder="Search"></div>
